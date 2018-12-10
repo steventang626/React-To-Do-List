@@ -1,6 +1,6 @@
 # React-To-Do-List
 
-This is a simple to-do-list web application implemented using React and Semantic UI React. Using this application, you can add a new task, mark tasks as finished and select to show and hide tasks.
+This is a simple to-do-list web application implemented using React and Semantic UI React. Using this application, you can add a new task, mark tasks as finished and select to show and hide finished tasks.
 
 ![Capture1](https://raw.githubusercontent.com/steventang626/Markdown-Photos/master/Photos/todo1.png)
 
