@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Input, Button } from 'semantic-ui-react'
+
 class TodoList extends Component {
     componentDidUpdate() {
         this.props.inputElement.current.focus();
@@ -8,13 +10,14 @@ class TodoList extends Component {
             <div className="todoListMain">
                 <div className="header">
                     <form onSubmit={this.props.addItem}>
-                        <input
-                            placeholder="Task"
+                        <Input
+                            focus
+                            placeholder="Add a task here..."
                             ref={this.props.inputElement}
                             value={this.props.currentItem.text}
                             onChange={this.props.handleInput}
                         />
-                        <button type="submit"> Add Task </button>
+                        <Button type="submit" content='Add' primary />
                     </form>
                 </div>
             </div>
