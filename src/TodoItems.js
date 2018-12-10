@@ -22,14 +22,26 @@ class TodoItems extends Component {
         const todoEntries = this.props.entries;
         const listItems = todoEntries.map(this.createTasks);
         const listItemsDone = todoEntries.map(this.createTasksDone);
+        let hasDone = false;
+        const length = listItemsDone.length;
+        for (let i = 0; i < length; i++) {
+            if(listItemsDone[i] !== false) {
+                hasDone = true;
+                break;
+            }
+        }
         return (
             <div>
                 <div>
                     <ul className="theList">{listItems}</ul>
                 </div>
-                <div>
-                    <ul className="theList">{listItemsDone}</ul>
-                </div>
+                {
+                    hasDone &&
+                    <div>
+                        <div>Finished Tasks</div>
+                        <ul className="theList">{listItemsDone}</ul>
+                    </div>
+                }
             </div>
         )
     }
