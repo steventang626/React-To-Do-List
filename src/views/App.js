@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import TodoList from './TodoList';
 import TodoItems from './TodoItems';
-import './views/css/App.css';
+import './css/App.css';
 import 'semantic-ui-css/semantic.min.css';
 
 class App extends Component {

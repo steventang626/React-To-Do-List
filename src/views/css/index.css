@@ -4,12 +4,6 @@ body {
     font-family: sans-serif;
 }
 
-.content {
-    /*padding: 50px;*/
-    /*background-color: #66CCFF;*/
-    /*font-family: sans-serif;*/
-}
-
 #container {
     display: flex;
     justify-content: center;

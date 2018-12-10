@@ -21,7 +21,7 @@ class TodoItems extends Component {
         return (
             !item.status &&
             <li key={item.key}>
-                <Checkbox label={<label><s>{item.text}</s></label>} defaultChecked onClick={() => this.props.changeItemStatus(item.key)}/>
+                <Checkbox label={<label><s>&nbsp;{item.text}&nbsp;</s></label>} defaultChecked onClick={() => this.props.changeItemStatus(item.key)}/>
             </li>
         )
     };
@@ -44,7 +44,7 @@ class TodoItems extends Component {
             }
         }
         return (
-            <div className="content">
+            <div>
                 <div>
                     <ul className="theList">{listItems}</ul>
                 </div>
