@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Input, Button } from 'semantic-ui-react'
+import { Input, Button, Header, Icon } from 'semantic-ui-react'
 
 class TodoList extends Component {
     componentDidUpdate() {
@@ -8,11 +8,16 @@ class TodoList extends Component {
     render() {
         return (
             <div className="todoListMain">
+                <p/>
+                <Header as='h3' icon textAlign='center' className="iconHeader">
+                    <Icon name='sticky note outline' circular />
+                    <Header.Content>Yuhan's To-Do List</Header.Content>
+                </Header>
                 <div className="header">
                     <form onSubmit={this.props.addItem}>
                         <Input
                             focus
-                            placeholder="Add a task here..."
+                            placeholder="Add a new task..."
                             ref={this.props.inputElement}
                             value={this.props.currentItem.text}
                             onChange={this.props.handleInput}

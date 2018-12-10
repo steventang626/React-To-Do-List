@@ -1,7 +1,14 @@
 import React, { Component } from 'react'
-import { Checkbox } from 'semantic-ui-react'
+import { Checkbox, Label } from 'semantic-ui-react'
 // onClick={() => this.props.changeItemStatus(item.key)}
 class TodoItems extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            show: true,
+        };
+    }
+
     createTasks = item => {
         return (
             item.status &&
@@ -18,6 +25,12 @@ class TodoItems extends Component {
             </li>
         )
     };
+    hideAndShow = (e) => {
+        e.preventDefault();
+        this.setState({
+            show: !this.state.show
+        })
+    };
     render() {
         const todoEntries = this.props.entries;
         const listItems = todoEntries.map(this.createTasks);
@@ -31,15 +44,31 @@ class TodoItems extends Component {
             }
         }
         return (
-            <div>
+            <div className="content">
                 <div>
                     <ul className="theList">{listItems}</ul>
                 </div>
                 {
                     hasDone &&
                     <div>
-                        <div>Finished Tasks</div>
-                        <ul className="theList">{listItemsDone}</ul>
+                        <div>
+                            {
+                                this.state.show &&
+                                <Label onClick={this.hideAndShow}>
+                                    Hide Finished Tasks
+                                </Label>
+                            }
+                            {
+                                !this.state.show &&
+                                <Label onClick={this.hideAndShow} color="blue">
+                                    Show Finished Tasks
+                                </Label>
+                            }
+                        </div>
+                        {
+                            this.state.show &&
+                            <ul className="theList">{listItemsDone}</ul>
+                        }
                     </div>
                 }
             </div>
