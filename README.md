@@ -23,7 +23,7 @@ Run the React application. View in the browser at `localhost:3000`
     ├── views                    
         ├── css                  # Style Sheets Directory
             ├── App.css       
-        	└── index.css         
+            └── index.css         
         ├── App.js               # The main component of this application
         ├── TodoItems.js         # To-do list items' components
         └── TodoList.js          # To-do list's component
