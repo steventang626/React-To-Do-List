@@ -15,18 +15,21 @@ class TodoItems extends Component {
       <Checkbox label={item.text} onClick={() => this.props.changeItemStatus(item.key)}/>
     </li>
   );
+
   createTasksDone = (item) => (
     !item.status &&
     <li key={item.key}>
       <Checkbox label={<label><s>&nbsp;{item.text}&nbsp;</s></label>} defaultChecked onClick={() => this.props.changeItemStatus(item.key)}/>
     </li>
   );
+
   hideAndShow = (e) => {
     e.preventDefault();
     this.setState({
       show : !this.state.show
     })
   };
+
   render() {
     const todoEntries = this.props.entries;
     const listItems = todoEntries.map(this.createTasks);

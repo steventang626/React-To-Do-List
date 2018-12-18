@@ -5,6 +5,7 @@ class TodoList extends Component {
   componentDidUpdate() {
     this.props.inputElement.current.focus();
   }
+
   render() {
     return (
       <div className="todoListMain">
