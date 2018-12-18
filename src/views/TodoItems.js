@@ -53,15 +53,11 @@ class TodoItems extends Component {
             <div>
               {
                 this.state.show &&
-                <Label onClick={this.hideAndShow}>
-                                  Hide Finished Tasks
-                </Label>
+                <Label onClick={this.hideAndShow}>Hide Finished Tasks</Label>
               }
               {
                 !this.state.show &&
-                <Label onClick={this.hideAndShow} color="blue">
-                                  Show Finished Tasks
-                </Label>
+                <Label onClick={this.hideAndShow} color="blue">Show Finished Tasks</Label>
               }
             </div>
             {

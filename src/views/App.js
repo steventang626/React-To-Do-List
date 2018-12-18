@@ -24,6 +24,7 @@ class App extends Component {
   };
 
   addItem = (e) => {
+    // Prevent default reloading
     e.preventDefault();
     const newItem = this.state.currentItem;
     if(newItem.text !== "") {
