@@ -30,8 +30,9 @@ Run the React application. View in the browser at `localhost:3000`
         ├── TodoItems.js         # To-do list items' components
         └── TodoList.js          # To-do list's component
     ├── test               		 # Test Directory
-    	└── init.js              # Simple rendering test
+    	└── App.test.js          # Simple rendering test
     └── index.js                 # The initial page
+    
 ```
 
 ## Built With
